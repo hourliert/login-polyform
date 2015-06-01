@@ -80,11 +80,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           expect(c1.$.password.invalid).to.be.true;
         });
 
-        test('fires login-form-login', function(done) {
+        test('fires login event', function(done) {
           var username = 'thomas',
               password = '1234';
 
-          c1.addEventListener('login-form-login', function(event) {
+          c1.addEventListener('login', function(event) {
             assert.equal(event.detail.username, username);
             assert.equal(event.detail.password, password);
             done();

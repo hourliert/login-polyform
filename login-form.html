@@ -207,9 +207,9 @@ Example:
     // Element Behavior
 
     /**
-     * The `login-form-login` event is fired whenever `fireLogin` is called.
+     * The `login` event is fired whenever `fireLogin` is called.
      *
-     * @event login-form-login
+     * @event login
      * @detail {{username: string, password: string}}
      */
 
@@ -226,10 +226,10 @@ Example:
     },
 
     /**
-     * Trigger the `login-form-login` event with the user credentials as paramters.
+     * Trigger the `login` event with the user credentials as paramters.
      */
     fireLogin: function() {
-      this.fire('login-form-login', {
+      this.fire('login', {
         username: this.username,
         password: this.password
       });
