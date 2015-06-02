@@ -56,10 +56,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           assert.equal(c1.passwordInputLabel, 'Password');
         });
         test('defines the "usernameValidationPattern" property', function() {
-          assert.equal(c1.usernameValidationPattern, '[a-zA-Z0-9]*');
+          assert.equal(c1.usernameValidationPattern, '^[a-zA-Z0-9]+$');
         });
         test('defines the "passwordValidationPattern" property', function() {
-          assert.equal(c1.passwordValidationPattern, '[a-zA-Z0-9]*');
+          assert.equal(c1.passwordValidationPattern, '^[a-zA-Z0-9]+$');
         });
         test('defines the "usernameErrorMessage" property', function() {
           assert.equal(c1.usernameErrorMessage, 'letters and numbers only');
@@ -73,11 +73,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         test('defines the "password" property', function() {
           assert.equal(c1.password, '');
         });
+        test('get the user credentials', function() {
+          expect(c1.computeCredentials('Bob', 'Morane')).to.deep.equal({ username: 'Bob', password: 'Morane' });
+        });
 
         test('invalidate the form', function() {
-          c1.validate();
-          expect(c1.$.username.invalid).to.be.true;
-          expect(c1.$.password.invalid).to.be.true;
+          expect(c1.validate()).to.be.false;
         });
 
         test('fires login event', function(done) {

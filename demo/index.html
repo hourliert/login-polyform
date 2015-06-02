@@ -20,8 +20,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <p>An example of <code>&lt;login-form&gt;</code>:</p>
 
-    <login-form>
-      <img avatar src="https://randomuser.me/api/portraits/med/women/27.jpg" alt="avatar"/>
-    </login-form>
+    <template is="dom-bind" id="app">
+      <login-form on-login="handleLogin" credentials="{{_user}}">
+        <img avatar src="https://randomuser.me/api/portraits/med/women/27.jpg" alt="avatar"/>
+      </login-form>
+    </template>
+
+    <script>
+      var app = document.querySelector('#app');
+
+      app.handleLogin = function(e) {
+        console.log('login', e.detail);
+        console.log(this._user);
+      }
+    </script>
   </body>
 </html>
