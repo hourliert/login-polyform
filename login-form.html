@@ -201,13 +201,13 @@ Example:
       },
 
       /**
-       * Complete user credentials.
+       * User credentials stringified.
        * @type {{username: string, password: string}}
        */
       credentials: {
-        type: Object,
+        type: String,
         notify: true,
-        computed: 'computeCredentials(username, password)'
+        computed: '_computeCredentials(username, password)'
       }
     },
 
@@ -235,11 +235,11 @@ Example:
      * @param  {string} password
      * @return {{username: string, password: string}} Hash representing user credentials
      */
-    computeCredentials: function(username, password) {
-      return {
+    _computeCredentials: function(username, password) {
+      return JSON.stringify({
         username: username,
         password: password
-      };
+      });
     },
 
     /**
