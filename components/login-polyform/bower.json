@@ -1,0 +1,36 @@
+{
+  "name": "login-polyform",
+  "version": "0.0.6",
+  "authors": [
+    "Thomas Hourlier <hourliert@gmail.com>"
+  ],
+  "description": "A material login form asking for login and password.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "login",
+    "form"
+  ],
+  "main": "login-polyform.html",
+  "license": "MIT",
+  "homepage": "https://github.com/hourliert/login-polyform/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "paper-button": "PolymerElements/paper-button#^1.0.0",
+    "paper-input": "PolymerElements/paper-input#^1.0.0",
+    "paper-material": "PolymerElements/paper-material#^1.0.0",
+    "iron-form": "PolymerElements/iron-form#~1.0.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*",
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#~1.0.1",
+    "test-fixture": "PolymerElements/test-fixture#~1.0.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "login-polyform",
+  "version": "0.0.6",
+  "authors": [
+    "Thomas Hourlier <hourliert@gmail.com>"
+  ],
+  "description": "A material login form asking for login and password.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "login",
+    "form"
+  ],
+  "main": "login-polyform.html",
+  "license": "MIT",
+  "homepage": "https://github.com/hourliert/login-polyform/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.7.6",
+    "gulp": "^3.8.11",
+    "gulp-bg": "0.0.5",
+    "ps-node": "0.0.4"
+  }
+}
