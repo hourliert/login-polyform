@@ -21,7 +21,8 @@
     "/demo/"
   ],
   "scripts": {
-    "test": "gulp wct:remote"
+    "postinstall": "bower install",
+    "test": "gulp test:remote"
   },
   "devDependencies": {
     "browser-sync": "^2.7.6",
