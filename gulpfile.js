@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	bg = require("gulp-bg"),
 	ps = require('ps-node');
 
-var POLYSERVE_PORT = 8080;
+var POLYSERVE_PORT = 8080,
+    elementName = 'login-polyform';
 
 var browserSyncConfig = function(path, cb) {
   bs.init({
@@ -39,16 +40,16 @@ gulp.task('polyserve', function(cb) {
 });
 	
 gulp.task('serve', ['polyserve'], function(cb) {
-  browserSyncConfig('/components/login-form/demo/', cb);
+  browserSyncConfig('/components/' + elementName + '/demo/', cb);
   watchComponent();
 });
 
 gulp.task('serve:doc', ['polyserve'], function(cb) {
-  browserSyncConfig('/components/login-form/', cb);
+  browserSyncConfig('/components/' + elementName + '/', cb);
   watchComponent();
 });
 
 gulp.task('test:watch', ['polyserve'], function(cb) {
-  browserSyncConfig('/components/login-form/test/', cb);
+  browserSyncConfig('/components/' + elementName + '/test/', cb);
   watchComponent();
 });

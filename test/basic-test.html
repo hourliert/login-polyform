@@ -20,20 +20,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <!-- Step 1: import the element to test -->
     <link rel="import" href="../../test-fixture/test-fixture.html">
-    <link rel="import" href="../login-form.html">
+    <link rel="import" href="../login-polyform.html">
   </head>
   <body>
 
     <!-- You can use the document as a place to set up your fixtures. -->
     <test-fixture id="NoLightDOM">
       <template>
-        <login-form></login-form>
+        <login-polyform></login-polyform>
       </template>
     </test-fixture>
     
 
     <script>
-      suite('<login-form>', function() {
+      suite('<login-polyform>', function() {
         var c1;
 
         setup(function() {

@@ -20,12 +20,13 @@ A material login form asking for login and password.
 
 Example:
 
-    <login-form></login-form>
+    <login-polyform on-login="handleLogin" credentials="{{_user}}">
+      <img avatar src="https://randomuser.me/api/portraits/med/women/27.jpg"/>
+    </login-polyform>
 
 @demo
 -->
-<dom-module id="login-form">
-
+<dom-module id="login-polyform">
   <style>
     :host {
       display: block;
@@ -101,7 +102,7 @@ Example:
 
   Polymer({
 
-    is: 'login-form',
+    is: 'login-polyform',
 
     properties: {
 
@@ -266,5 +267,4 @@ Example:
       });
     }
   });
-
 </script>

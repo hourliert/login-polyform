@@ -12,18 +12,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>login-form Demo</title>
+    <title>login-polyform Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../login-form.html">
+    <link rel="import" href="../login-polyform.html">
   </head>
   <body>
 
-    <p>An example of <code>&lt;login-form&gt;</code>:</p>
+    <p>An example of <code>&lt;login-polyform&gt;</code>:</p>
 
     <template is="dom-bind" id="app">
-      <login-form on-login="handleLogin" credentials="{{_user}}">
+      <login-polyform on-login="handleLogin" credentials="{{_user}}">
         <img avatar src="https://randomuser.me/api/portraits/med/women/27.jpg" alt="avatar"/>
-      </login-form>
+      </login-polyform>
     </template>
 
     <script>
@@ -32,7 +32,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.handleLogin = function(e) {
         console.log('login', e.detail);
         console.log(this._user);
-      }
+      };
     </script>
   </body>
 </html>

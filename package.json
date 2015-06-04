@@ -1,5 +1,5 @@
 {
-  "name": "login-form",
+  "name": "login-polyform",
   "version": "0.0.5",
   "authors": [
     "Thomas Hourlier <hourliert@gmail.com>"
@@ -12,9 +12,9 @@
     "login",
     "form"
   ],
-  "main": "login-form.html",
+  "main": "login-polyform.html",
   "license": "MIT",
-  "homepage": "https://github.com/hourliert/login-form/",
+  "homepage": "https://github.com/hourliert/login-polyform/",
   "ignore": [
     "/.*",
     "/test/",
