@@ -53,3 +53,5 @@ gulp.task('test:watch', ['polyserve'], function(cb) {
   browserSyncConfig('/components/' + elementName + '/test/', cb);
   watchComponent();
 });
+
+try { require('web-component-tester').gulp.init(gulp); } catch (err) {}
