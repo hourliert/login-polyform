@@ -1,4 +1,4 @@
-# login-polyform
+# login-polyform [![Build Status](https://travis-ci.org/hourliert/login-polyform.svg?branch=master)](https://travis-ci.org/hourliert/login-polyform)
 
 A material login form asking for login and password.
 
