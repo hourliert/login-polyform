@@ -33,7 +33,7 @@ gulp.task('polyserve', function(cb) {
     }
  
     if (!resultList.length) {
-      bg('polyserve', '-p ' + POLYSERVE_PORT)();
+      bg('./node_modules/polyserve/bin/polyserve', '-p ' + POLYSERVE_PORT)();
     }
     cb();
   }); 
