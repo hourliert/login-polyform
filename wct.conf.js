@@ -4,8 +4,6 @@ module.exports = {
   		browsers: ['chrome', 'safari']
   	},
     sauce: {
-      username: 'hourliert',
-      accessKey: '033d2a88-73e4-470f-ac0b-db2c726ee4c3',
       browsers: [
 		  {
 		    "browserName": "internet explorer",
