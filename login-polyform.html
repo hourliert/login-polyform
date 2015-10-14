@@ -206,7 +206,7 @@ Example:
        * @type {{username: string, password: string}}
        */
       credentials: {
-        type: String,
+        type: Object,
         notify: true,
         computed: '_computeCredentials(username, password)'
       }
@@ -237,10 +237,10 @@ Example:
      * @return {{username: string, password: string}} Hash representing user credentials
      */
     _computeCredentials: function(username, password) {
-      return JSON.stringify({
+      return {
         username: username,
         password: password
-      });
+      };
     },
 
     /**

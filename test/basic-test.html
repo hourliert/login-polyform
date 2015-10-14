@@ -74,7 +74,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           assert.equal(c1.password, '');
         });
         test('get the user credentials', function() {
-          expect(c1._computeCredentials('Bob', 'Morane')).to.equal(JSON.stringify({ username: 'Bob', password: 'Morane' }));
+          expect(c1._computeCredentials('Bob', 'Morane')).to.deep.equal({ username: 'Bob', password: 'Morane' });
         });
 
         test('invalidate the form', function() {
