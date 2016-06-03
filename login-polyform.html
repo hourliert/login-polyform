@@ -76,7 +76,8 @@ Example:
           label="[[usernameInputLabel]]"
           value="{{username}}" 
           auto-validate pattern="[[usernameValidationPattern]]"
-          error-message="[[usernameErrorMessage]]">
+          error-message="[[usernameErrorMessage]]"
+          on-keydown="_checkForEnter">
         </paper-input>
 
         <paper-input id="password" 
@@ -84,7 +85,8 @@ Example:
           label="[[passwordInputLabel]]" 
           value="{{password}}"
           auto-validate pattern="[[passwordValidationPattern]]"
-          error-message="[[passwordErrorMessage]]">
+          error-message="[[passwordErrorMessage]]"
+          on-keydown="_checkForEnter">
         </paper-input>
 
         <paper-button 
@@ -229,6 +231,15 @@ Example:
      * @detail {{username: string, password: string}}
      */
 
+    /**
+     * Check if user pressed enter
+     * @param  {Object} e KeyboardEvent
+     */
+    _checkForEnter: function(e){
+      if( e.key == 'Enter' || e.keyCode == 13 ){
+        this.validate(e);
+      }
+    },
 
     /**
      * Compute the user credentials
